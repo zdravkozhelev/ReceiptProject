@@ -6,7 +6,7 @@ namespace Изпит1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Display display = new Display();
         }
     }
 }
