@@ -63,8 +63,12 @@ public class Display
         Receipts receipt = new Receipts();
         Console.WriteLine("Enter name: ");
         receipt.Name = Console.ReadLine();
-        Console.WriteLine("Enter stock: ");
-        receipt.Stock = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter products: ");
+        receipt.Products =Console.ReadLine();
+        Console.WriteLine("Enter description: ");
+        receipt.Description = Console.ReadLine();
+        Console.WriteLine("Enter author: ");
+        receipt.Author = Console.ReadLine();
         reciepController.Add(receipt);
     }
     public void ListAll() 
@@ -75,7 +79,7 @@ public class Display
         var products = reciepController.GetAll();
         foreach (var item in products) 
         {
-            Console.WriteLine("{0} {1} {2} {3}", item.Id, item.Name, item.Price, item.Stock);
+            Console.WriteLine("{0} {1} {2} {3} {4}", item.Id, item.Name, item.Products, item.Description, item.Author);
         }
     }
     private void Update() 
@@ -87,10 +91,12 @@ public class Display
         {
             Console.WriteLine("Enter name: ");
             receipt.Name = Console.ReadLine();
-            Console.WriteLine("Enter price: ");
-            receipt.Price = decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Enter stock: ");
-            receipt.Stock = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter products: ");
+            receipt.Products =Console.ReadLine();
+            Console.WriteLine("Enter description: ");
+            receipt.Description =Console.ReadLine();
+            Console.WriteLine("Enter author: ");
+            receipt.Author = Console.ReadLine();
             reciepController.Update(receipt);
 
         }
@@ -109,8 +115,8 @@ public class Display
             Console.WriteLine(new string('-', 40));
             Console.WriteLine("Id: "+receipt.Id);
             Console.WriteLine("Name: "+receipt.Name);
-            Console.WriteLine("Price: " + receipt.Price);
-            Console.WriteLine("Stock: " + receipt.Stock);
+            Console.WriteLine("Price: " + receipt.Products);
+            Console.WriteLine("Stock: " + receipt.Description);
             Console.WriteLine(new string('-', 40));
 
 
