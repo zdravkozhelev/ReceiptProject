@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class ReceiptController
+public class ReceiptController
 {
     private ReceiptContext receiptContext;
 
     Receipts receipts = new Receipts();
+    private ReceiptContext context;
+
+    public ReceiptController(ReceiptContext context)
+    {
+        this.context = context;
+    }
+
+    public ReceiptController()
+    {
+    }
+
     public List<Receipts> GetAll()
     {
         using (receiptContext = new ReceiptContext())

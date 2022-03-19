@@ -115,8 +115,8 @@ public class Display
             Console.WriteLine(new string('-', 40));
             Console.WriteLine("Id: "+receipt.Id);
             Console.WriteLine("Name: "+receipt.Name);
-            Console.WriteLine("Price: " + receipt.Products);
-            Console.WriteLine("Stock: " + receipt.Description);
+            Console.WriteLine("Products: " + receipt.Products);
+            Console.WriteLine("Method Of Preparation: " + receipt.Description);
             Console.WriteLine(new string('-', 40));
 
 

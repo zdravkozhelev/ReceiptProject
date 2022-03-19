@@ -15,7 +15,7 @@ public class ReceiptContext:DbContext
 
     }
 
-    public DbSet<Receipts> Receipts { get; set; }
+    public virtual DbSet<Receipts> Receipts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
     {
